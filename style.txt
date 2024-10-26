@@ -1,0 +1,87 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 400px; /* Maximum width for larger screens */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #ff7043;
+    margin-bottom: 15px;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.wish-block {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f4511e;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem; /* Adjust h1 font size for mobile */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust paragraph font size for mobile */
+    }
+
+    input {
+        font-size: 0.9rem; /* Adjust input font size for mobile */
+    }
+
+    button {
+        font-size: 0.9rem; /* Adjust button font size for mobile */
+    }
+}

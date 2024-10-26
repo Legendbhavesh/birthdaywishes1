@@ -1,0 +1,25 @@
+emailjs.init('E4GVeWpFOm2al5lG0'); // Initialize EmailJS
+
+
+// Handle form submission
+document.getElementById('wishesForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form from refreshing the page
+
+    const wish1 = document.getElementById('wish1').value;
+    const wish2 = document.getElementById('wish2').value;
+    const wish3 = document.getElementById('wish3').value;
+
+    // Send wishes via EmailJS
+    emailjs.send('your_service_id', 'your_template_id', {
+        wish1: wish1,
+        wish2: wish2,
+        wish3: wish3,
+    }).then(() => {
+        // Show thank-you message and hide the form
+        document.getElementById('thankYouMessage').classList.remove('hidden');
+        document.getElementById('wishesForm').classList.add('hidden');
+    }).catch((error) => {
+        console.error('Error sending email:', error);
+        alert('Oops! Something went wrong.');
+    });
+});
